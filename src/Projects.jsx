@@ -5,7 +5,10 @@ import Advice from './images/advice.jpg'
 import ecom from './images/ecom.jpg'
 import landing from './images/landing1.jpg'
 import tip from './images/tip.jpg'
-import todo from './images/todo.jpg'
+import clip from './images/clip.jpg'
+import news from './images/news.jpg'
+import sign from './images/sign.jpg'
+import poster from './images/Poster.svg'
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -92,8 +95,58 @@ function projects() {
     </Card.Body>
   </Card>
             </Col>
-           </Row>
+          
+
+
+
         
+        <Col xs={12} md={4} lg={3}  className='p-2 py-3 p-md-3'>
+            <Card >
+              <a href="https://clipapp-two.vercel.app/">
+    <Card.Img fluid variant="top" src={clip} />
+    </a>
+    <Card.Body>
+      <Card.Title> <a href="https://github.com/chiditrigga/clipapp">git repository</a> </Card.Title>
+    
+    </Card.Body>
+  </Card>
+            </Col>
+           
+            <Col xs={12} md={4} lg={3}  className='p-2 py-3 p-md-3'>
+            <Card >
+              <a href="https://newsappss.vercel.app/">
+    <Card.Img fluid variant="top" src={news} />
+    </a>
+    <Card.Body>
+      <Card.Title> <a href="https://github.com/chiditrigga/newsappss">git repository</a> </Card.Title>
+    
+    </Card.Body>
+  </Card>
+            </Col>
+            <Col xs={12} md={4} lg={3}  className='p-2 py-3 p-md-3'>
+            <Card >
+              <a href="https://drag-and-drop-gallery.vercel.app/">
+    <Card.Img fluid variant="top" src={sign} />
+    </a>
+    <Card.Body>
+      <Card.Title> <a href="https://github.com/chiditrigga/dragAndDropGallery">git repository</a> </Card.Title>
+    
+    </Card.Body>
+  </Card>
+            </Col>
+
+            <Col xs={12} md={4} lg={3}  className='p-2 py-3 p-md-3'>
+            <Card >
+              <a href="https://pro002-eight.vercel.app/">
+    <Card.Img fluid variant="top" src={poster} />
+    </a>
+    <Card.Body>
+      <Card.Title> <a href="https://github.com/chiditrigga/pro002">git repository</a> </Card.Title>
+    
+    </Card.Body>
+  </Card>
+            </Col>
+            </Row>
     
    
   </Container>
