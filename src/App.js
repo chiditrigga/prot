@@ -1,7 +1,7 @@
 import Home from "./Home";
 import Projects from "./Projects";
 import { createBrowserRouter,
-  Route,Routes,
+  Route,
   createRoutesFromElements,
   RouterProvider
   } from 'react-router-dom'
