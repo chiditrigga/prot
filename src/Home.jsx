@@ -28,7 +28,7 @@ function Home() {
         <Row>
             <Col className='d-flex align-items-center vh-100'>
             <div >
-                 <h1 style={{color:"red"}}>Hey, I'm Daniel</h1>
+                 <h1 style={{color:"#F44336"}}>Hey, I'm Daniel</h1>
                 
                  <p>I am currently a full stack developer seeking many ways to improve my skills through problem-solving and creating various projects</p>
                  <Button variant="outline-danger" onClick={ () => navigate("/contact")}> Contact </Button>
