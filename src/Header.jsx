@@ -18,9 +18,9 @@ function Header() {
   return (
     <>
 {['md'].map((expand) => (
-    <Navbar style={{textDecoration:"none"}} key={expand} expand={expand} className="bg-body-tertiary mb-3">
-      <Container className='nav' >
-        <Navbar.Brand href="#">Portfolio</Navbar.Brand>
+    <Navbar style={{textDecoration:"none"}} key={expand} expand={expand} className="bg-body-dark mb-3">
+      <Container  fluid className='nav' >
+        <Navbar.Brand style={{color:"#F44336"}} href="/" className='ps-2 ps-md-3'>Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
@@ -34,9 +34,9 @@ function Header() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3 nav2">
-            <Nav.Link > <Link className='nav2' style={{textDecoration:"none",color:"grey"}} to={"/"}>Home</Link> </Nav.Link> 
-              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey"}} to={"/project"}>project</Link></Nav.Link>
-              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey"}} to={"/contact"}>contact</Link></Nav.Link>
+            <Nav.Link > <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/"}>Home</Link> </Nav.Link> 
+              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/project"}>project</Link></Nav.Link>
+              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/contact"}>contact</Link></Nav.Link>
              
             </Nav>
            
