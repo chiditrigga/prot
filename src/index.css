@@ -2,3 +2,13 @@
   color:  red !important;
   
 }
+
+body{
+  background: black !important;
+  color: aliceblue !important;
+}
+
+.card:hover{
+  border-color: red !important;
+  border: 3px solid red;
+}

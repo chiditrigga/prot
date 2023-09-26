@@ -21,6 +21,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom";
 import Header from './Header';
+import './index.css'
 
 function projects() {
   return (
@@ -44,11 +45,11 @@ function projects() {
 
             
             <Row>
-              <Col className='text-center'><h1>projects</h1></Col>
+              <Col className='text-center'><h1 style={{color:"red"}}>projects</h1></Col>
             </Row>
            <Row>
             <Col xs={12} md={4} lg={3} className='p-2 py-3 p-md-3'>
-            <Card>
+            <Card className='card'>
               <a href="https://adviceapp2.vercel.app/">
     <Card.Img fluid variant="top" src={Advice} />
     </a>
