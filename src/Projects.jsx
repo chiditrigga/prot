@@ -21,10 +21,12 @@ import Header from './Header';
 
 function projects() {
   return (
+    <>
+    <Header/>
           <Container>
 
 
-<Header/>
+
 
 
 
@@ -95,7 +97,7 @@ function projects() {
     
    
   </Container>
-  )
+  </>)
 }
 
 export default projects
