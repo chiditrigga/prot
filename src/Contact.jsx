@@ -14,10 +14,10 @@ function Contact() {
         <Row>
             <Col className='d-flex align-items-center vh-100'>
             <div >
-                 <h1>Contact</h1>
+                 <h1 style={{color:"red"}}>Contact</h1>
                  <ul>
-                  <li>                <h4><a href = "mailto: chididaniel1998@gmail.com">chididaniel1998@gmail.com</a></h4></li>
-                  <li><a href="tel:+2348100185232">08100185232</a></li>
+                  <li style={{color:"grey"}}>                <h4 ><a style={{color:"grey"}} href = "mailto: chididaniel1998@gmail.com">chididaniel1998@gmail.com</a></h4></li>
+                  <li style={{color:"grey"}}><a style={{color:"grey"}} href="tel:+2348100185232">08100185232</a></li>
                  </ul>
 
                  
