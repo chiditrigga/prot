@@ -1,5 +1,6 @@
 import Home from "./Home";
 import Projects from "./Projects";
+import Contact from "./Contact";
 import { createBrowserRouter,
   Route,
   createRoutesFromElements,
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
        
         <Route path="/project" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         
         
         {/* private page */}
