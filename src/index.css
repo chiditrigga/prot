@@ -29,3 +29,11 @@ body{
 .btn-close{
   background-color:#F44336 !important;
 }
+
+.offcanvas-header{
+  color: red !important;
+}
+
+.contact:hover{
+  color: #F44336 !important;
+}
