@@ -33,10 +33,10 @@ function Header() {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3 nav2">
-            <Nav.Link > <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/"}>Home</Link> </Nav.Link> 
-              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/project"}>project</Link></Nav.Link>
-              <Nav.Link> <Link className='nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/contact"}>contact</Link></Nav.Link>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Nav.Link> <Link className=' pe-2 nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/"}>Home</Link> </Nav.Link> 
+              <Nav.Link > <Link className=' pe-2 nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/project"}>project</Link></Nav.Link>
+              <Nav.Link > <Link className='pe-2 nav2' style={{textDecoration:"none",color:"grey",fontWeight:"500"}} to={"/contact"}>contact</Link></Nav.Link>
              
             </Nav>
            

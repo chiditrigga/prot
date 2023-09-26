@@ -1,7 +1,10 @@
-.nav2:hover{
-  color:  red !important;
+.nav2:hover {
+  color:  #F44336 !important;
+  
   
 }
+
+
 
 body{
   background: black !important;
@@ -9,6 +12,20 @@ body{
 }
 
 .card:hover{
-  border-color: red !important;
-  border: 3px solid red;
+  border-color: #F44336 !important;
+  border: 3px solid #F44336;
+}
+
+.navbar-toggler.collapsed{
+  background: red !important;
+}
+
+.offcanvas{
+  width: 80vw !important;
+  background: black !important;
+  color: aliceblue !important;
+}
+
+.btn-close{
+  background-color:#F44336 !important;
 }
