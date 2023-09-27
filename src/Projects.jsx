@@ -29,8 +29,8 @@ function projects() {
       <Header />
       <Container>
         <Row>
-          <Col className="text-center">
-            <h1 style={{ color: "red" }}>projects</h1>
+          <Col className="text-center py-2" style={{borderBottom:"3px solid #F44336"}}>
+            <h1 style={{ color: "red" }}>Projects</h1>
           </Col>
         </Row>
         <Row>
