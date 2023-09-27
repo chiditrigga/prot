@@ -41,6 +41,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={Advice} />
               </a>
               <Card.Body>
+                <h4>An advice generator using third party api</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/adviceapp2">
@@ -57,6 +58,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={ecom} />
               </a>
               <Card.Body>
+                <h4>An ecom website</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/ecomweb">
@@ -72,6 +74,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={landing} />
               </a>
               <Card.Body>
+                <h4>A landing page</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/introPage">
@@ -87,6 +90,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={tip} />
               </a>
               <Card.Body>
+                <h4>An app for calculating tips</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/workcat">
@@ -103,6 +107,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={clip} />
               </a>
               <Card.Body>
+                <h4>A clipboard website</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/clipapp">
@@ -119,6 +124,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={news} />
               </a>
               <Card.Body>
+                <h4>News blog</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/newsappss">
@@ -134,6 +140,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={sign} />
               </a>
               <Card.Body>
+                <h4>A gallery app with drag and drop</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/dragAndDropGallery">
@@ -150,6 +157,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={poster} />
               </a>
               <Card.Body>
+                <h4> movie app</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/pro002">
@@ -165,6 +173,7 @@ function projects() {
                 <Card.Img fluid variant="top" src={todo} />
               </a>
               <Card.Body>
+                <h4>A todo app</h4>
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/tasklist">
