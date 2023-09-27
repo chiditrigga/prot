@@ -9,6 +9,7 @@ import clip from "./images/clip.jpg";
 import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import poster from "./images/Poster.svg";
+import todo from "./images/todo.jpg"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -152,6 +153,21 @@ function projects() {
                 <Card.Title>
                   {" "}
                   <a href="https://github.com/chiditrigga/pro002">
+                    git repository
+                  </a>{" "}
+                </Card.Title>
+              </Card.Body>
+            </Card>
+          </Col>
+             <Col xs={12} md={4} lg={3} className="p-2 py-3 p-md-3">
+            <Card>
+              <a href="https://tasklist-ruddy.vercel.app/">
+                <Card.Img fluid variant="top" src={todo} />
+              </a>
+              <Card.Body>
+                <Card.Title>
+                  {" "}
+                  <a href="https://github.com/chiditrigga/tasklist">
                     git repository
                   </a>{" "}
                 </Card.Title>
