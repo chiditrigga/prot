@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 .nav2:hover {
   color:  #F44336 !important;
   
@@ -37,3 +43,22 @@ body{
 .contact:hover{
   color: #F44336 !important;
 }
+
+@media screen and (max-width: 768px) {
+  .min{
+    width: 100% !important;
+  }
+  
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .max{
+     max-width:"10px" !important;
+  max-height:"10px" !important;
+  
+  }
+  
+}
+

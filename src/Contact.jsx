@@ -6,11 +6,18 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
+import {motion} from 'framer-motion'
 
 function Contact() {
   return (
     <>
       <Header />
+      <motion.div
+    initial={{y:"100%"}}
+    animate={{y:0}}
+    exit={{opacity:1}}
+    transition={{duration:0.5}}
+    >
       <Container>
         <Row>
           <Col className="d-flex align-items-center vh-100">
@@ -39,6 +46,7 @@ function Contact() {
           </Col>
         </Row>
       </Container>
+      </motion.div>
     </>
   );
 }

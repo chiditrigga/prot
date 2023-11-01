@@ -14,13 +14,21 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import "./index.css";
+import {motion} from 'framer-motion'
 
 function Home() {
   const navigate = useNavigate();
 
   return (
     <>
-      <Header />
+    <Header/>
+    <motion.div
+    initial={{y:"100%"}}
+    animate={{y:0}}
+    exit={{opacity:1}}
+    transition={{duration:0.5}}
+    >
+      
 
       <Container>
         <Row>
@@ -28,7 +36,7 @@ function Home() {
             <div>
               <h1 style={{ color: "#F44336" }}>Hey, I'm Daniel</h1>
 
-              <p>
+              <p className="underline font-bold">
                 I am currently a front-end web developer seeking many ways to
                 improve my skills through problem-solving and creating various
                 projects
@@ -40,20 +48,28 @@ function Home() {
                 {" "}
                 Contact{" "}
               </Button>
-              <Button
+   
+                <Button
+           
                 className="mx-2"
                 variant="outline-warning"
                 onClick={() => navigate("/project")}
               >
-                {" "}
+                
+     
+                   {" "}
                 projects{" "}
+                
+               
               </Button>
+             
+              
             </div>
           </Col>
         </Row>
       </Container>
-    </>
-  );
+    </motion.div>
+ </> );
 }
 
 export default Home;

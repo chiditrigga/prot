@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {motion} from 'framer-motion'
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -39,7 +40,10 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Portfolio
+                  <motion.div>
+                       Portfolio
+                  </motion.div>
+               
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -55,7 +59,12 @@ function Header() {
                       }}
                       to={"/"}
                     >
-                      Home
+                      <motion.div className="div" whileHover={{
+                        scale:1.5
+                      }}>
+   Home
+                      </motion.div>
+                   
                     </Link>{" "}
                   </Nav.Link>
                   <Nav.Link>
@@ -69,7 +78,11 @@ function Header() {
                       }}
                       to={"/project"}
                     >
-                      project
+                        <motion.div className="div" whileHover={{
+                        scale:1.5
+                      }}>
+   Project
+                      </motion.div>
                     </Link>
                   </Nav.Link>
                   <Nav.Link>
@@ -83,7 +96,11 @@ function Header() {
                       }}
                       to={"/contact"}
                     >
-                      contact
+                        <motion.div className="div" whileHover={{
+                        scale:1.5
+                      }}>
+   Contact
+                      </motion.div>
                     </Link>
                   </Nav.Link>
                 </Nav>
