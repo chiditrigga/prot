@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -17,14 +17,20 @@ import "./index.css";
 function Header() {
   return (
     <>
+   
+
+    
+    <div style={{position:"absolute"}}>
+
+
       {["md"].map((expand) => (
         <Navbar
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none" , zIndex:"20",position:"relative"}}
           key={expand}
           expand={expand}
-          className="bg-body-dark mb-3"
+          className="bg-body-dark "
         >
-          <Container fluid className="nav">
+          <Container fluid className="nav" style={{width:"100vw"}}>
             <Navbar.Brand
               style={{ color: "#F44336" }}
               href="/"
@@ -47,8 +53,9 @@ function Header() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link>
+                
+                  <Nav  className="justify-content-end flex-grow-1 pe-3">
+                  
                     {" "}
                     <Link
                       className=" pe-2 nav2"
@@ -66,8 +73,8 @@ function Header() {
                       </motion.div>
                    
                     </Link>{" "}
-                  </Nav.Link>
-                  <Nav.Link>
+                  
+                 
                     {" "}
                     <Link
                       className=" pe-2 nav2"
@@ -84,8 +91,8 @@ function Header() {
    Project
                       </motion.div>
                     </Link>
-                  </Nav.Link>
-                  <Nav.Link>
+                
+                  
                     {" "}
                     <Link
                       className="pe-2 nav2"
@@ -102,14 +109,17 @@ function Header() {
    Contact
                       </motion.div>
                     </Link>
-                  </Nav.Link>
+                 
                 </Nav>
+                
+                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
       ))}
-    </>
+      </div>
+       </>
   );
 }
 

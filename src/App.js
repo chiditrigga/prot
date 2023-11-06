@@ -1,55 +1,32 @@
 import Home from "./Home";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import './index.css'
+import Projectss from "./Projectss";
+
+import About from "./about";
 import { createBrowserRouter,
   Route,
   createRoutesFromElements,
-  RouterProvider
+  RouterProvider,
+  useLocation,Router,BrowserRouter,Routes
   } from 'react-router-dom'
-  import { AnimatePresence } from "framer-motion";
-import Header from "./Header";
+  import { AnimatePresence,motion } from "framer-motion";
+import LocationProvider from "./LocationProvider"
+import RoutesWithAnimation from "./RoutesWithAnimation"
 
 
 
 function App() {
-  const router = createBrowserRouter(
-    
-    createRoutesFromElements(
 
-   
-      <Route>
-      
-            <Route index element={<Home />} />
-       
-        <Route path="/project" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-         
-       
-         
-        
-        {/* private page */}
-      
+ 
 
-       
-        
-        
-     
-    
-      </Route>
-    
-    )
-  );
+
   return (
     <>
+    <BrowserRouter>
    
-      
-     <AnimatePresence >
-    
-      <RouterProvider  router={router} />
-    </AnimatePresence> 
-
-    
+   <LocationProvider>
+    <RoutesWithAnimation/>
+    </LocationProvider>
+    </BrowserRouter>
     </>
   );
 }

@@ -1,8 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
+ body{
+  overflow: hidden !important;
+  height: 100vh !important;
+  
+ 
+} 
 
 .nav2:hover {
   color:  #F44336 !important;
@@ -12,15 +13,9 @@
 
 
 
-body{
-  background: black !important;
-  color: aliceblue !important;
-}
 
-.card:hover{
-  border-color: #F44336 !important;
-  border: 3px solid #F44336;
-}
+
+
 
 .navbar-toggler.collapsed{
   background: red !important;
@@ -62,3 +57,28 @@ body{
   
 }
 
+
+
+.card:hover{
+  border-color: #F44336 !important;
+  border: 1px solid #F44336;
+}
+
+
+@media screen and (max-width: 768px) {
+  .min{
+    width: 100% !important;
+  }
+  
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .max{
+     max-width:"10px" !important;
+  max-height:"10px" !important;
+  
+  }
+  
+}
