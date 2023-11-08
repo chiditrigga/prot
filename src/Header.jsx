@@ -36,7 +36,10 @@ function Header() {
               href="/"
               className="ps-2 ps-md-3"
             >
-              Portfolio
+            <motion.div 
+            whileHover={{scale:1.3}}
+            whileTap={{scale:0.8}}
+            >Portfolio</motion.div> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas

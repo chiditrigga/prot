@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 import Advice from "./images/advice.jpg";
@@ -11,19 +10,16 @@ import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import poster from "./images/Poster.svg";
 import todo from "./images/todo.jpg";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import github from "./images/github.png"
 
 import Container from "react-bootstrap/Container";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+
 import Header from "./Header";
 import Spinner from 'react-bootstrap/Spinner';
 import "./index.css";
@@ -48,12 +44,12 @@ function Projectss() {
         }}
         animate={{ y: "0vh"}}
         transition={{
-          duration: 0.2,
+          duration: 0.4,
           ease: "easeOut",
           type: "spring",
           mass: 0.9,
         }}
-        style={{ background: "black" }}
+        style={{ background: "#0e072c" }}
       >
        
         <Container style={{ height: "100vh" }}>
@@ -62,14 +58,14 @@ function Projectss() {
             <Row>
               <Col
                 className="text-center py-2 mx-2 mt-5"
-                style={{ borderBottom: "3px solid #F44336" }}
+                style={{ borderBottom: "1px solid silver" }}
               >
-                <h1 style={{ color: "red" }}>Projects</h1>
+                <h1  style={{ color: "silver" }}>Projects</h1>
               </Col>
             </Row>
             <Row
-              style={{ maxHeight: "500px", overflowX: "hidden" }}
-              className="overflow-y-scroll mt-3 py-4 pe-4 lg-px-5 "
+              style={{ overflowX: "hidden" }}
+              className="overflow-y-scroll mt-3 py-4 pe-4 lg-px-5 five"
             >
               <Col xs={12} md={4}  className="p-2 py-3 p-lg-3 ">
                 <motion.div
@@ -126,7 +122,7 @@ function Projectss() {
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                   initial={{
                     scale:2
@@ -179,7 +175,7 @@ function Projectss() {
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                   initial={{
                     scale:2
@@ -232,7 +228,7 @@ function Projectss() {
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                   initial={{
                     scale:2
@@ -286,7 +282,7 @@ function Projectss() {
                 </motion.div>
               </Col>
 
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                   initial={{
                     scale:2
@@ -340,7 +336,7 @@ function Projectss() {
                 </motion.div>
               </Col>
 
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                 initial={{
                   scale:2
@@ -393,22 +389,9 @@ function Projectss() {
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
+                
                 >
                   <Card className="min max mx-3" style={{ maxHeight: "200px" }}>
                     <a href="https://drag-and-drop-gallery.vercel.app/">
@@ -447,22 +430,9 @@ function Projectss() {
                 </motion.div>
               </Col>
 
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
+                 
                 >
                   <Card className="min max mx-3" style={{ maxHeight: "200px" }}>
                     <a href="https://pro002-eight.vercel.app/">
@@ -501,12 +471,14 @@ function Projectss() {
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-md-3">
+              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
                 <motion.div
                   className="min max"
                   whileHover={{
                     scale: 1.1,
                   }}
+
+                  
                 >
                   <Card className="min max mx-3">
                     <a href="https://tasklist-ruddy.vercel.app/">
