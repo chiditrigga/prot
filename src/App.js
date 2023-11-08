@@ -1,6 +1,6 @@
 import Home from "./Home";
 import Projectss from "./Projectss";
-import Contact from "./contact";
+import Contact from "./Contact";
 
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
