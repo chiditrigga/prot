@@ -38,7 +38,7 @@ function Projectss() {
       live: "https://ecomweb-tau.vercel.app/",
       image: ecom,
       about: "An ecom website",
-      git: "",
+      git: "https://github.com/chiditrigga/ecomweb",
     },
 
     {
@@ -56,10 +56,10 @@ function Projectss() {
     },
 
     {
-      live: "https://github.com/chiditrigga/pro002",
+      live: "https://pro002-eight.vercel.app/",
       image: poster,
       about: " movie app",
-      git: "",
+      git: "https://github.com/chiditrigga/pro002",
     },
 
     {
@@ -70,7 +70,7 @@ function Projectss() {
     },
 
     {
-      live: "",
+      live: "https://thriving-druid-264941.netlify.app/",
       image: landing,
       about: "A landing page for a business",
       git: "https://github.com/chiditrigga/introPage",
