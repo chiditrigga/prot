@@ -10,8 +10,8 @@ import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import poster from "./images/Poster.svg";
 import todo from "./images/todo.jpg";
-import {  motion } from "framer-motion";
-import github from "./images/github.png"
+import { motion } from "framer-motion";
+import github from "./images/github.png";
 
 import Container from "react-bootstrap/Container";
 
@@ -19,30 +19,91 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 import Header from "./Header";
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from "react-bootstrap/Spinner";
 import "./index.css";
 
 function Projectss() {
- 
+  const [isloading, setIsloading] = useState(true);
 
-  const [isloading,setIsloading] = useState(true)
+  const list = [
+    {
+      live: "https://adviceapp2.vercel.app/",
+      image: Advice,
+      about: " An advice generator using third party api",
+      git: "https://github.com/chiditrigga/adviceapp2",
+    },
+
+    {
+      live: "https://ecomweb-tau.vercel.app/",
+      image: ecom,
+      about: "An ecom website",
+      git: "",
+    },
+
+    {
+      live: "https://workcat.vercel.app/",
+      image: tip,
+      about: " An app for calculating tips ",
+      git: "https://github.com/chiditrigga/workcat",
+    },
+
+    {
+      live: "https://drag-and-drop-gallery.vercel.app/",
+      image: sign,
+      about: " A gallery app with authentication and drag and drop features",
+      git: "https://github.com/chiditrigga/dragAndDropGallery",
+    },
+
+    {
+      live: "https://github.com/chiditrigga/pro002",
+      image: poster,
+      about: " movie app",
+      git: "",
+    },
+
+    {
+      live: "https://tasklist-ruddy.vercel.app/",
+      image: todo,
+      about: "A todo app",
+      git: "https://github.com/chiditrigga/tasklist",
+    },
+
+    {
+      live: "",
+      image: landing,
+      about: "A landing page for a business",
+      git: "https://github.com/chiditrigga/introPage",
+    },
+
+    {
+      live: "https://news-blog-b8hg.vercel.app/",
+      image: news,
+      about: "News blog",
+      git: "https://github.com/chiditrigga/introPage",
+    },
+
+    {
+      live: "https://clipapp-two.vercel.app/",
+      image: clip,
+      about: " A clipboard website",
+      git: "https://github.com/chiditrigga/clipapp",
+    },
+  ];
 
   const onLoad = () => {
-    setIsloading(false)
+    setIsloading(false);
   };
 
   return (
     <>
-    <Header/>
-      
+      <Header />
+
       <motion.div
-       
         initial={{
-          y: "100vh"
+          y: "100vh",
         }}
-        animate={{ y: "0vh"}}
+        animate={{ y: "0vh" }}
         transition={{
           duration: 0.4,
           ease: "easeOut",
@@ -51,472 +112,82 @@ function Projectss() {
         }}
         style={{ background: "#0e072c" }}
       >
-       
         <Container style={{ height: "100vh" }}>
-    
           <div>
             <Row>
               <Col
                 className="text-center py-2 mx-2 mt-5"
                 style={{ borderBottom: "1px solid silver" }}
               >
-                <h1  style={{ color: "silver" }}>Projects</h1>
+                <h1 style={{ color: "silver" }}>Projects</h1>
               </Col>
             </Row>
             <Row
               style={{ overflowX: "hidden" }}
               className="overflow-y-scroll mt-3 py-4 pe-4 lg-px-5 five"
             >
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3 ">
-                <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3" style={{ maxHeight: "200px" }}>
-                    <a href="https://adviceapp2.vercel.app/">
-                      <motion.div
-                      
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={Advice}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-7">
-                        An advice generator using third party api <br />
-                        <a href="https://github.com/chiditrigga/adviceapp2">
-                          
-                          <Image src={github}/>
-                        </a>{" "}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://ecomweb-tau.vercel.app/">
+              {list.map((lis) => {
+                return (
+                  <Col xs={12} md={4} className="p-2 py-3 p-lg-3 ">
                     <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={ecom}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6 ">
-                        An ecom website <br />
-                        <a href="https://github.com/chiditrigga/ecomweb">
-                        <Image src={github}/>
+                      initial={{
+                        scale: 2,
+                      }}
+                      animate={{
+                        scale: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="min max"
+                      whileHover={{
+                        scale: 1.1,
+                      }}
+                    >
+                      <Card
+                        className="min max mx-3"
+                        style={{ maxHeight: "200px" }}
+                      >
+                        <a href={lis.live}>
+                          <motion.div
+                            className="min max"
+                            style={{ maxHeight: "100px", minHeight: "80px" }}
+                            whileHover={{
+                              scale: 1.1,
+                            }}
+                          >
+                            <Card.Img
+                              className={isloading ? "d-none " : ""}
+                              fluid
+                              variant="top"
+                              src={lis.image}
+                              style={{ maxHeight: "100px" }}
+                              onLoad={onLoad}
+                            />
+                            <div className="d-flex justify-content-center align-items-center pt-5">
+                              {isloading && (
+                                <Spinner
+                                  className=""
+                                  style={{ color: "grey" }}
+                                  animation="border"
+                                />
+                              )}
+                            </div>
+                          </motion.div>
                         </a>
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://news-blog-b8hg.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={landing}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        A landing page <br />
-                        <a href="https://github.com/chiditrigga/introPage">
-                        <Image src={github}/>
-                        </a>{" "}
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://workcat.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={tip}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        An app for calculating tips <br />
-                        <a href="https://github.com/chiditrigga/workcat">
-                        <Image src={github}/>
-                        </a>{" "}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                  initial={{
-                    scale:2
-                  }}
-                  animate={{
-                    scale:1
-                  }}
-                  transition={{
-                    delay:0.2,
-                    duration:0.3
-                  }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://clipapp-two.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={clip}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        A clipboard website <br />
-                        <a href="https://github.com/chiditrigga/clipapp">
-                        <Image src={github}/>
-                        </a>
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                initial={{
-                  scale:2
-                }}
-                animate={{
-                  scale:1
-                }}
-                transition={{
-                  delay:0.2,
-                    duration:0.3
-                }}
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://newsappss.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={news}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        News blog <br />
-                        <a href="https://github.com/chiditrigga/newsappss">
-                        <Image src={github}/>
-                        </a>
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                
-                >
-                  <Card className="min max mx-3" style={{ maxHeight: "200px" }}>
-                    <a href="https://drag-and-drop-gallery.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={sign}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        A gallery app with drag and drop <br />
-                        <a href="https://github.com/chiditrigga/dragAndDropGallery">
-                        <Image src={github}/>
-                        </a>
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                 
-                >
-                  <Card className="min max mx-3" style={{ maxHeight: "200px" }}>
-                    <a href="https://pro002-eight.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={poster}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fw-6">
-                        {" "}
-                        movie app <br />
-                        <a href="https://github.com/chiditrigga/pro002">
-                        <Image src={github}/>
-                        </a>{" "}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-              <Col xs={12} md={4}  className="p-2 py-3 p-lg-3">
-                <motion.div
-                  className="min max"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-
-                  
-                >
-                  <Card className="min max mx-3">
-                    <a href="https://tasklist-ruddy.vercel.app/">
-                    <motion.div
-                        className="min max"
-                        style={{ maxHeight: "100px" , minHeight:"80px" }}
-                        whileHover={{
-                          scale: 1.1,
-                        }}
-                      > 
-
-                      <Card.Img
-                       className= {isloading ? "d-none ": ""}
-                          fluid
-                          variant="top"
-                          src={todo}
-                          style={{ maxHeight: "100px"}}
-                          onLoad={onLoad}
-                        />
-                        <div className="d-flex justify-content-center align-items-center pt-5">
-                          {isloading && <Spinner className="" style={{color:"grey"}}  animation="border" />}
-                        </div>
-                        
-                       
-                      </motion.div>
-                    </a>
-                    <Card.Body>
-                      <p className="fs-6">
-                        A todo app
-                        <br />
-                        <a href="https://github.com/chiditrigga/tasklist">
-                        <Image src={github}/>
-                        </a>{" "}
-                      </p>{" "}
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
+                        <Card.Body>
+                          <p className="fs-7">
+                            {lis.about} <br />
+                            <a href={lis.git}>
+                              <Image src={github} />
+                            </a>{" "}
+                          </p>
+                        </Card.Body>
+                      </Card>
+                    </motion.div>
+                  </Col>
+                );
+              })}
             </Row>
           </div>
         </Container>

@@ -76,7 +76,13 @@
   }
 }
 
+.alin{
+  display: flex !important;
+  align-items: center !important;
+ 
+ 
 
+}
 
 @media screen and (min-width: 768px) {
   .max{

@@ -2,12 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import "./index.css";
 import { motion } from "framer-motion";
+import pics from './images/mypic.jpg'
 
 
 function Home() {
@@ -31,7 +33,7 @@ function Home() {
       >
         <Container className="scr">
           <Row>
-            <Col className="d-flex align-items-center vh-100">
+            <Col md={8} className="d-flex align-items-center vh-100">
               <div>
                 <motion.div
                  initial={{
@@ -111,6 +113,29 @@ function Home() {
                   projects{" "}
                 </motion.button>
               </div>
+            </Col>
+            <Col  md={4} className="alin"> 
+            <motion.div className="alin"
+             initial={{
+              opacity:1,
+              x:"500px",
+              
+             }}
+             animate={{
+              opacity:0.5,
+            
+              x:"0px"
+
+              
+             }}
+             transition={{
+              duration:1,
+              delay:0.5
+             }}
+            >
+              
+          <Image fluid src={pics} className=" w-100" style={{maxHeight:"500px",borderRadius:"200px"}} /> 
+            </motion.div>
             </Col>
           </Row>
         </Container>

@@ -8,8 +8,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { motion } from "framer-motion";
 import Progress from "react-bootstrap/ProgressBar";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Contact() {
+  const skill = [
+    "React",
+    "Next.js",
+    "tailwind",
+    "Bootstrap",
+    "Javascript",
+    "Framer Motion",
+    "Git",
+  ];
   return (
     <>
       <Header />
@@ -79,6 +89,7 @@ function Contact() {
                         style={{ color: "white", textDecoration: "none" }}
                         href="mailto: chididaniel1998@gmail.com"
                       >
+                        <i class="bi bi-envelope-at h5 pe-2"></i>{" "}
                         chididaniel1998@gmail.com
                       </a>
                     </motion.h4>
@@ -99,10 +110,38 @@ function Contact() {
                       style={{ color: "white", textDecoration: "none" }}
                       href="tel:+2348100185232"
                     >
-                      08100185232
+                      <i class="bi bi-telephone h5 pe-2"></i> 08100185232
                     </a>
                   </motion.li>
                 </motion.ul>
+                <motion.div
+                  className="d-flex justify-evenly"
+                  initial={{ opacity: 0, y: "100px" }}
+                  animate={{ opacity: 1, y: "10px" }}
+                  transition={{ delay: 1.5, duration: 0.9 }}
+                >
+                  <motion.a
+                    whileHover={{ scale: 1.5 }}
+                    href="https://github.com/chiditrigga"
+                    className="mx-3 mt-2"
+                  >
+                    <i class="bi bi-github text-white h2 "></i>
+                  </motion.a>{" "}
+                  <motion.a
+                    whileHover={{ scale: 1.5 }}
+                    href="https://www.linkedin.com/in/chidi-ugwu-43662423a/"
+                    className="mx-3 mt-2"
+                  >
+                    <i class="bi bi-linkedin h2  text-white"></i>
+                  </motion.a>{" "}
+                  <motion.a
+                    whileHover={{ scale: 1.5 }}
+                    href="https://twitter.com/ChidiUg85346290"
+                    className="mx-3 mt-2"
+                  >
+                    <i class="bi bi-twitter-x h2 text-white"></i>
+                  </motion.a>
+                </motion.div>
               </div>
             </Col>
             <Col md={6} className="text-white  d-flex align-items-center ">
@@ -111,61 +150,33 @@ function Contact() {
                 className="flex justify-content-center w-100 lg-ps-5"
               >
                 <motion.div
-                
-                 initial={{opacity:0}}
-                 animate={{opacity:1,y:"10px"}}
-                 transition={{
-                  delay:1,
-                  duration:0.8,
-                  ease: "easeOut"
-                 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, y: "10px" }}
+                  transition={{
+                    delay: 1,
+                    duration: 0.8,
+                    ease: "easeOut",
+                  }}
                 >
                   {/* <h3  style={{
                     
                     listStyle: "none",
                     borderBottom: "1px solid silver",
                   }} className=" mx-5 py-3">Skills</h3> */}
-                  <ul  style={{ listStyle: "none" }} className="ms-0">
-                    <li className="my-1">
-                      {" "}
-                      <h5>React</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>Next.js</h5>{" "}
-                      <Progress  animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>Tailwind</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>Bootstrap</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>Framer Motion</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li>
-                      {" "}
-                      <h5>Javascript</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>React</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
-                    <li className="my-1">
-                      {" "}
-                      <h5>Git</h5>{" "}
-                      <Progress animated variant="danger" now={90} />
-                    </li>
+                  <ul style={{ listStyle: "none" }} className="ms-0 ">
+                    {skill.map((ski) => {
+                      return (
+                        <li className="my-2">
+                          <h5>{ski}</h5>
+                          <Progress
+                            animated
+                            variant="white"
+                            style={{ height: "10px" }}
+                            now={95}
+                          />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </motion.div>
               </div>
