@@ -85,6 +85,14 @@ function Home() {
                   {" "}
                   Contact{" "}
                 </Button>
+                <Button
+                className="ms-2"
+                  variant="outline-danger"
+                  onClick={() => navigate("/contact")}
+                >
+                  {" "}
+                  Skill{" "}
+                </Button>
 
                 <motion.button
                   whileHover={{
