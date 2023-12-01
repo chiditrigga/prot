@@ -10,6 +10,7 @@ import Header from "./Header";
 import "./index.css";
 import { motion } from "framer-motion";
 import pics from './images/mypic.jpg'
+import Design from "./components/Design";
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
   return (
     <>
       <Header />
+      
       <motion.div
         initial={{
           y: "100vh",
@@ -31,9 +33,10 @@ function Home() {
         }}
         style={{ background: "#0e072c" }}
       >
-        <Container className="scr">
-          <Row>
-            <Col md={8} className="d-flex align-items-center vh-100">
+        <Container className="scr ">
+        <Design/>
+          <Row className="vh-100">
+            <Col md={8} className="d-flex align-items-center omo">
               <div>
                 <motion.div
                  initial={{
@@ -132,9 +135,14 @@ function Home() {
               duration:1,
               delay:0.5
              }}
+             whileHover={{
+              opacity:1,
+              scale:1.1,
+              
+             }}
             >
               
-          <Image fluid src={pics} className=" w-100" style={{maxHeight:"500px",borderRadius:"200px"}} /> 
+          <Image fluid src={pics} className=" w-100 alin2" style={{maxHeight:"500px",borderRadius:"200px"}} /> 
             </motion.div>
             </Col>
           </Row>

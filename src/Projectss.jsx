@@ -22,6 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import Spinner from "react-bootstrap/Spinner";
 import "./index.css";
+import Design from "./components/Design";
 
 function Projectss() {
   const [isloading, setIsloading] = useState(true);
@@ -98,6 +99,7 @@ function Projectss() {
   return (
     <>
       <Header />
+      
 
       <motion.div
         initial={{
@@ -113,6 +115,7 @@ function Projectss() {
         style={{ background: "#0e072c" }}
       >
         <Container style={{ height: "100vh" }}>
+          <Design/>
           <div>
             <Row>
               <Col

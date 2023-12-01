@@ -9,6 +9,8 @@ import "./index.css";
 import { motion } from "framer-motion";
 import Progress from "react-bootstrap/ProgressBar";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Design from "./components/Design";
+
 
 function Contact() {
   const skill = [
@@ -23,6 +25,7 @@ function Contact() {
   return (
     <>
       <Header />
+   
       <motion.div
         initial={{
           y: "100vh",
@@ -37,6 +40,7 @@ function Contact() {
         style={{ background: "#0e072c" }}
       >
         <Container>
+          <Design/>
           <Row>
             <Col className="d-flex align-items-center vh-100 " md={6}>
               <div>

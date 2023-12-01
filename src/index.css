@@ -74,15 +74,10 @@
   body{
     overflow:visible !important;
   }
+ 
 }
 
-.alin{
-  display: flex !important;
-  align-items: center !important;
- 
- 
 
-}
 
 @media screen and (min-width: 768px) {
   .max{
@@ -93,7 +88,10 @@
   .five{
     max-height: 500px;
   }
-  
+  .alin{
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 
 
@@ -108,6 +106,16 @@
   .min{
     width: 100% !important;
   }
+  .alin2{
+    max-height: fit-content !important;
+    padding: 20px 20px;
+      
+  }
+  .omo{
+    margin-top: 50px;
+    padding-bottom: 0px !important;
+    
+  }
   
 }
 
@@ -119,5 +127,6 @@
   max-height:"10px" !important;
   
   }
+ 
   
 }
