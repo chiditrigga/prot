@@ -6,6 +6,7 @@ import ecom from "./images/ecom.jpg";
 import landing from "./images/landing1.jpg";
 import tip from "./images/tip.jpg";
 import clip from "./images/clip.jpg";
+import chat from './images/chat.png'
 import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import poster from "./images/Poster.svg";
@@ -28,6 +29,12 @@ function Projectss() {
   const [isloading, setIsloading] = useState(true);
 
   const list = [
+    {
+      live: "https://chat-api-iyor.vercel.app/",
+      image: chat,
+      about: " An ai chatbot with openai api",
+      git: "https://github.com/chiditrigga/chat-api",
+    },
     {
       live: "https://adviceapp2.vercel.app/",
       image: Advice,
@@ -90,6 +97,7 @@ function Projectss() {
       about: " A clipboard website",
       git: "https://github.com/chiditrigga/clipapp",
     },
+   
   ];
 
   const onLoad = () => {
