@@ -9,6 +9,7 @@ import clip from "./images/clip.jpg";
 import chat from './images/chat.png'
 import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
+import phone from './images/phoneT.png'
 import poster from "./images/Poster.svg";
 import todo from "./images/todo.jpg";
 import { motion } from "framer-motion";
@@ -32,8 +33,14 @@ function Projectss() {
     {
       live: "https://chat-api-iyor.vercel.app/",
       image: chat,
-      about: " An ai chatbot with openai api",
+      about: " An ai chatbot with openai api || next,typescript,open ai,tailwind",
       git: "https://github.com/chiditrigga/chat-api",
+    },
+    {
+      live: "https://phone-tracker.vercel.app/",
+      image: phone,
+      about: " An app that validates a phone number|| Next.js,Typescript,Tailwind",
+      git: "https://github.com/chiditrigga/phoneTracker",
     },
     {
       live: "https://adviceapp2.vercel.app/",
