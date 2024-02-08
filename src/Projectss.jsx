@@ -11,6 +11,7 @@ import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import phone from './images/phoneT.png'
 import poster from "./images/Poster.svg";
+import live from "./images/live.svg";
 import todo from "./images/todo.jpg";
 import { motion } from "framer-motion";
 import github from "./images/github.png";
@@ -164,12 +165,12 @@ function Projectss() {
                     >
                       <Card
                         className="min max mx-3"
-                        style={{ maxHeight: "200px" }}
+                      //  style={{ maxHeight: "200px" }}
                       >
                         <a href={lis.live}>
                           <motion.div
                             className="min max"
-                            style={{ maxHeight: "100px", minHeight: "80px" }}
+                           // style={{ maxHeight: "100px", minHeight: "80px" }}
                             whileHover={{
                               scale: 1.1,
                             }}
@@ -179,10 +180,11 @@ function Projectss() {
                               fluid
                               variant="top"
                               src={lis.image}
-                              style={{ maxHeight: "100px" }}
+                              style={{}}
+                             
                               onLoad={onLoad}
                             />
-                            <div className="d-flex justify-content-center align-items-center pt-5">
+                            <div className="d-flex justify-content-center align-items-center">
                               {isloading && (
                                 <Spinner
                                   className=""
@@ -193,12 +195,17 @@ function Projectss() {
                             </div>
                           </motion.div>
                         </a>
+                        
                         <Card.Body>
-                          <p className="fs-7">
-                            {lis.about} <br />
+                          <p className="fs-7 ">
+                            
+                          <span style={{fontWeight:"600" }}> {lis.about}</span> 
+                           <div style={{borderBottom:"1px dotted black"}}></div>
+                           <br />
                             <a href={lis.git}>
                               <Image src={github} />
                             </a>{" "}
+                           <span className="ms-2" style={{fontWeight:"1000"}}> <a href={lis.live}>Live Link <Image src={live} /></a> </span> 
                           </p>
                         </Card.Body>
                       </Card>

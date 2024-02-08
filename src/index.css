@@ -2,11 +2,18 @@
   overflow: hidden !important;
   height: 100vh !important;
   background: #d60000;
+  
  
   
  
 } 
-
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  color: #d60000;
+}
 
 ::-webkit-scrollbar{
   width: 10px;
@@ -46,7 +53,7 @@
 }
 
 .offcanvas{
-  width: 80vw !important;
+  width: 60vw !important;
   background: black !important;
   color: aliceblue !important;
 }
@@ -130,3 +137,4 @@
  
   
 }
+
