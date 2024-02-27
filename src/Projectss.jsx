@@ -13,6 +13,7 @@ import phone from './images/phoneT.png'
 import poster from "./images/Poster.svg";
 import live from "./images/live.svg";
 import todo from "./images/todo.jpg";
+import countries from "./images/desktop-preview.jpg";
 import { motion } from "framer-motion";
 import github from "./images/github.png";
 
@@ -32,10 +33,29 @@ function Projectss() {
 
   const list = [
     {
+      live: "https://countries-pi-two.vercel.app/",
+      image: countries,
+      about: "All countries || Next.js,Tailwind,Tanstack query,typescript,shadecn",
+      git: "https://github.com/chiditrigga/countries",
+    },
+
+    {
       live: "https://chat-api-iyor.vercel.app/",
       image: chat,
       about: " An ai chatbot with openai api || next,typescript,open ai,tailwind",
       git: "https://github.com/chiditrigga/chat-api",
+    },
+    {
+      live: "https://pro002-eight.vercel.app/",
+      image: poster,
+      about: " movie Discovery app || React.js,Bootstrap5,Api app",
+      git: "https://github.com/chiditrigga/pro002",
+    },
+    {
+      live: "https://newsappss.vercel.app/",
+      image: news,
+      about: "News blog",
+      git: "https://github.com/chiditrigga/newsappsse",
     },
     {
       live: "https://phone-tracker.vercel.app/",
@@ -63,6 +83,7 @@ function Projectss() {
       about: " An app for calculating tips ",
       git: "https://github.com/chiditrigga/workcat",
     },
+  
 
     {
       live: "https://drag-and-drop-gallery.vercel.app/",
@@ -71,12 +92,7 @@ function Projectss() {
       git: "https://github.com/chiditrigga/dragAndDropGallery",
     },
 
-    {
-      live: "https://pro002-eight.vercel.app/",
-      image: poster,
-      about: " movie app",
-      git: "https://github.com/chiditrigga/pro002",
-    },
+
 
     {
       live: "https://tasklist-ruddy.vercel.app/",
@@ -92,12 +108,7 @@ function Projectss() {
       git: "https://github.com/chiditrigga/introPage",
     },
 
-    {
-      live: "https://news-blog-b8hg.vercel.app/",
-      image: news,
-      about: "News blog",
-      git: "https://github.com/chiditrigga/introPage",
-    },
+    
 
     {
       live: "https://clipapp-two.vercel.app/",
@@ -142,12 +153,12 @@ function Projectss() {
               </Col>
             </Row>
             <Row
-              style={{ overflowX: "hidden" }}
+              style={{ overflowX: "hidden"}}
               className="overflow-y-scroll mt-3 py-4 pe-4 lg-px-5 five"
             >
               {list.map((lis) => {
                 return (
-                  <Col xs={12} md={4} className="p-2 py-3 p-lg-3 ">
+                  <Col  xs={12} md={6} lg={4} className="p-2 py-3 p-lg-3 ">
                     <motion.div
                       initial={{
                         scale: 2,
@@ -164,6 +175,7 @@ function Projectss() {
                       }}
                     >
                       <Card
+                      style={{minHeight:"400px"}}
                         className="min max mx-3"
                       //  style={{ maxHeight: "200px" }}
                       >
