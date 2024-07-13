@@ -7,6 +7,8 @@ import landing from "./images/landing1.jpg";
 import tip from "./images/tip.jpg";
 import clip from "./images/clip.jpg";
 import chat from './images/chat.png'
+import moviee from './images/moviee.png'
+import landingg from './images/landing.png'
 import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
 import phone from './images/phoneT.png'
@@ -33,6 +35,18 @@ function Projectss() {
 
   const list = [
     {
+      live: "https://ull.vercel.app/",
+      image: landingg,
+      about: " A landing page || next.js,Tailwind,swiper.js",
+      git: "https://github.com/chiditrigga/ull/tree/main/ulll",
+    },
+    {
+      live: "https://movie-discovery-ql1q.vercel.app/",
+      image: moviee,
+      about: " movie Discovery app || React.js,tailwind,Api,tanstack query",
+      git: "https://github.com/chiditrigga/movie-discovery/tree/main/movie",
+    },
+    {
       live: "https://countries-pi-two.vercel.app/",
       image: countries,
       about: "All countries || Next.js,Tailwind,Tanstack query,typescript,shadecn",
@@ -45,12 +59,7 @@ function Projectss() {
       about: " An ai chatbot with openai api || next,typescript,open ai,tailwind",
       git: "https://github.com/chiditrigga/chat-api",
     },
-    {
-      live: "https://pro002-eight.vercel.app/",
-      image: poster,
-      about: " movie Discovery app || React.js,Bootstrap5,Api app",
-      git: "https://github.com/chiditrigga/pro002",
-    },
+   
     {
       live: "https://newsappss.vercel.app/",
       image: news,
