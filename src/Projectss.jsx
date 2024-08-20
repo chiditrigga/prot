@@ -18,6 +18,7 @@ import todo from "./images/todo.jpg";
 import countries from "./images/desktop-preview.jpg";
 import { motion } from "framer-motion";
 import github from "./images/github.png";
+import buil from "./images/buil.png";
 
 import Container from "react-bootstrap/Container";
 
@@ -34,6 +35,12 @@ function Projectss() {
   const [isloading, setIsloading] = useState(true);
 
   const list = [
+    {
+      live: "https://app.wivali.ai/editor/builder",
+      image: buil,
+      about: " A Web builder || VVVeb, html,css,jquery,bootstrap,javascript",
+      git: "https://github.com/chiditrigga",
+    },
     {
       live: "https://ull.vercel.app/",
       image: landingg,
