@@ -35,12 +35,7 @@ function Projectss() {
   const [isloading, setIsloading] = useState(true);
 
   const list = [
-    {
-      live: "https://app.wivali.ai/editor/builder",
-      image: buil,
-      about: " A Web builder || VVVeb, html,css,jquery,bootstrap,javascript",
-      git: "https://github.com/chiditrigga",
-    },
+   
     {
       live: "https://ull.vercel.app/",
       image: landingg,
