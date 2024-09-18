@@ -8,6 +8,7 @@ import tip from "./images/tip.jpg";
 import clip from "./images/clip.jpg";
 import chat from './images/chat.png'
 import moviee from './images/moviee.png'
+import iphone from './images/iphone.png'
 import landingg from './images/landing.png'
 import news from "./images/news.jpg";
 import sign from "./images/sign.jpg";
@@ -35,6 +36,12 @@ function Projectss() {
   const [isloading, setIsloading] = useState(true);
 
   const list = [
+    {
+      live: "https://iphone-clone-red.vercel.app/",
+      image: iphone,
+      about: " Apple website clone || next.js,Tailwind,Framer-motion,aceternity-Ui",
+      git: "https://github.com/chiditrigga/iphoneClone",
+    },
    
     {
       live: "https://ull.vercel.app/",
